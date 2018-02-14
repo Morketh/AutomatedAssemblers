@@ -90,12 +90,13 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="MDKUtilities">
-      <HintPath>C:\Users\drewm\AppData\Local\Microsoft\VisualStudio\15.0_d4143680\Extensions\v5tbrnfn.fjt\MDKUtilities.dll</HintPath>
+      <HintPath>C:\Users\drewm\AppData\Local\Microsoft\VisualStudio\15.0_d4143680\Extensions\sfje0qsu.3ui\MDKUtilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Analyzer Include="C:\Users\drewm\AppData\Local\Microsoft\VisualStudio\15.0_d4143680\Extensions\v5tbrnfn.fjt\Analyzers\MDKAnalyzer.dll" />
+    <Analyzer Include="C:\Users\drewm\AppData\Local\Microsoft\VisualStudio\15.0_d4143680\Extensions\sfje0qsu.3ui\Analyzers\MDKAnalyzer.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="INI_Parser.cs" />
     <Compile Include="MDK\Bootstrapper.cs" />
     <AdditionalFiles Include="MDK\MDK.options">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
