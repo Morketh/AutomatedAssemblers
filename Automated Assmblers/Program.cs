@@ -21,12 +21,10 @@ namespace IngameScript
         string AutomatedAssemblerTAG = "[AI]";
         public Program()
         {
-            // The constructor, called only once every session and
-            // always before any other method is called. Use it to
-            // initialize your script. 
-            //     
-            // The constructor is optional and can be removed if not
-            // needed.
+            // Scan for assembler starting with [AI]
+            // check for BLANK Custom Data
+                // If True Write Default INI template to Assembler CD
+                // Else Ignore (It must already have been initilized so lets not erase any potential modifications)
         }
 
         public void Save()
@@ -53,6 +51,25 @@ namespace IngameScript
                 if (blocks[i].CustomName.StartsWith(AutomatedAssemblerTAG))
                 {
                     // Get INI Config from Assembler Custom Data
+                    // IF AutoLCDInstall is True 
+                        // (Look for LCD Panel starting with [AI])
+                        // Change name to "[LCD] Assembler Qoutas"
+                        // If Quota Overrides are enabled
+                        // Set Custom Data to "Inventory T:FILTER_VAR +component +ITEM:VALUE
+                        // Loop through all INI configured Key:Value pairs
+                    // Else
+                        // Set Custom Data to "Inventory T:* +component"
+                        // Set AutoLCD to True (AutoLCDInstall overrides INI Config)
+
+                    // If AutoLCD is True pull quotas from Mmasters Automatic LCD2 Inventory Command (advanced feature)
+                        // parse itemcount/maxitems from LCD
+                        // maxitems - itemcount = QuedItems
+
+                    // IF AssemblerMode (From INI) is Single
+                        // Set up entire Que on this device
+                    // Else switch(key)
+                        // Case ComponentName
+                        // que item "ComponentName" name only
                 }
             }
         }
